@@ -9,15 +9,14 @@ export default function Search() {
             <div className="input-group mb-3">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Enter a city"
                 id="city-input"
               />
               <input
                 type="submit"
                 value="Search"
-                class="btn btn-primary"
-                type="button"
+                className="btn btn-primary"
                 id="search-button"
               />
             </div>

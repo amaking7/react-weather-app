@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Search from "./Search";
 import LocationOverview from "./LocationOverview";
@@ -22,6 +21,7 @@ function App() {
           <a
             href="https://github.com/amaking7/react-weather-app"
             target="_blank"
+            rel="noreferrer"
           >
             Open-source code
           </a>{" "}

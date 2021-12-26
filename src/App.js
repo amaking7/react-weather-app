@@ -1,8 +1,5 @@
 import "./App.css";
-import Search from "./Search";
-import LocationOverview from "./LocationOverview";
-import WeatherInfo from "./WeatherInfo";
-import FutureForecast from "./FutureForecast";
+import Weather from "./Weather";
 
 function App() {
   return (
@@ -10,11 +7,7 @@ function App() {
       <div className="container">
         <div className="card">
           <div className="card-body">
-            <Search />
-            <LocationOverview />
-            <WeatherInfo />
-            <hr />
-            <FutureForecast />
+            <Weather />
           </div>
         </div>
         <small>

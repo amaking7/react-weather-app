@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import DateFormat from "./DateFormat";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -13,6 +14,7 @@ export default function Weather() {
       wind: Math.round(response.data.wind.speed * 3.6),
       humidity: response.data.main.humidity,
       description: response.data.weather[0].main,
+      date: new Date(response.data.dt * 1000),
       iconId: response.data.weather[0].icon,
       iconUrl: "http://openweathermap.org/img/wn/10d@2x.png",
     });
@@ -46,7 +48,10 @@ export default function Weather() {
         <div className="row">
           <div class="col-sm location-overview">
             <h1 id="current-city">{weatherData.city}</h1>
-            Last updated: <span id="date-time">Tue, 2:00 PM</span>
+            Last updated:{" "}
+            <span id="date-time">
+              <DateFormat date={weatherData.date} />
+            </span>
             <br />
             <span id="weather-description">{weatherData.description}</span>
           </div>

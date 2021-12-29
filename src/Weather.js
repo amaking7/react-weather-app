@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
-import DateFormat from "./DateFormat";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -44,51 +44,7 @@ export default function Weather() {
             </form>
           </div>
         </div>
-        {/* Location Overview */}
-        <div className="row">
-          <div class="col-sm location-overview">
-            <h1 id="current-city">{weatherData.city}</h1>
-            Last updated:{" "}
-            <span id="date-time">
-              <DateFormat date={weatherData.date} />
-            </span>
-            <br />
-            <span id="weather-description">{weatherData.description}</span>
-          </div>
-        </div>
-        {/* Weather Info */}
-        <div className="row">
-          <div className="col-sm">
-            <div className="weather-temperature">
-              <img
-                src={weatherData.iconUrl}
-                alt={weatherData.description}
-                id="current-weather-icon"
-              />
-              <span
-                className="current-city-temperature"
-                id="current-temperature"
-              >
-                {weatherData.temperature}
-              </span>
-              <span className="weather-units">
-                <a href="_" id="celsius-link" class="active">
-                  °C
-                </a>{" "}
-                |
-                <a href="_" id="fahrenheit-link">
-                  °F
-                </a>
-              </span>
-            </div>
-          </div>
-          <div className="col-sm">
-            Humidity:{" "}
-            <span id="current-city-humidity">{weatherData.humidity}</span>%
-            <br />
-            Wind: <span id="current-city-wind">{weatherData.wind}</span> km/h
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {

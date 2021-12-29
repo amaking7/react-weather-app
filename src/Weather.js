@@ -16,8 +16,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       description: response.data.weather[0].main,
       date: new Date(response.data.dt * 1000),
-      iconId: response.data.weather[0].icon,
-      iconUrl: "http://openweathermap.org/img/wn/10d@2x.png",
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
 
@@ -49,7 +48,6 @@ export default function Weather(props) {
                   className="form-control"
                   placeholder="Enter a city"
                   id="city-input"
-                  autoFocus="on"
                   onChange={captureCity}
                 />
                 <input

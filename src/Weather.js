@@ -22,7 +22,6 @@ export default function Weather(props) {
   }
 
   function search() {
-    // Make API call with city
     const apiKey = "4d85cd59016d6a2d49846056378f35f1";
     let units = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
@@ -41,29 +40,28 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <form onSubmit={handleSubmit}>
-          <div className="row search">
-            <div className="col-9">
-              <form className="row g-2" id="search-bar">
-                <div className="input-group mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Enter a city"
-                    id="city-input"
-                    onChange={captureCity}
-                  />
-                  <input
-                    type="submit"
-                    value="Search"
-                    className="btn btn-primary"
-                    id="search-button"
-                  />
-                </div>
-              </form>
-            </div>
+        <div className="row search">
+          <div className="col-9">
+            <form className="row g-2" id="search-bar" onSubmit={handleSubmit}>
+              <div className="input-group mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter a city"
+                  id="city-input"
+                  autoFocus="on"
+                  onChange={captureCity}
+                />
+                <input
+                  type="submit"
+                  value="Search"
+                  className="btn btn-primary"
+                  id="search-button"
+                />
+              </div>
+            </form>
           </div>
-        </form>
+        </div>
         <WeatherInfo data={weatherData} />
       </div>
     );

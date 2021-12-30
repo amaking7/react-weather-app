@@ -10,7 +10,7 @@ function App() {
             <Weather defaultCity="Madrid" />
           </div>
         </div>
-        <small>
+        <footer>
           <a
             href="https://github.com/amaking7/react-weather-app"
             target="_blank"
@@ -19,7 +19,7 @@ function App() {
             Open-source code
           </a>{" "}
           by Amanda
-        </small>
+        </footer>
       </div>
     </div>
   );

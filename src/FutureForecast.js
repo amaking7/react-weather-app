@@ -1,63 +1,21 @@
-import "./App.css";
+import React from "react";
+import "./FutureForecast.css";
 
-export default function FutureForecast() {
+export default function FutureForecast(props) {
   return (
     <div className="FutureForecast">
       <div className="row">
-        <div className="col-sm mini-future-forecast">
-          <span className="future-day">Wed</span>
-          <br />
+        <div className="col">
+          <div className="forecast-day">Wed</div>
           <img
-            src="http://openweathermap.org/img/wn/10d@2x.png"
-            className="mini-future-forecast-image"
-            alt="rainy"
+            src={props.data.iconUrl}
+            alt={props.data.description}
+            id="current-weather-icon"
           />
-          <br />
-          19°C
-        </div>
-        <div className="col-sm mini-future-forecast">
-          <span className="future-day">Thu</span>
-          <br />
-          <img
-            src="http://openweathermap.org/img/wn/03d@2x.png"
-            className="mini-future-forecast-image"
-            alt="scattered clouds"
-          />
-          <br />
-          17°C
-        </div>
-        <div className="col-sm mini-future-forecast">
-          <span className="future-day">Fri</span>
-          <br />
-          <img
-            src="http://openweathermap.org/img/wn/03d@2x.png"
-            className="mini-future-forecast-image"
-            alt="scattered clouds"
-          />
-          <br />
-          20°C
-        </div>
-        <div className="col-sm mini-future-forecast">
-          <span className="future-day">Sat</span>
-          <br />
-          <img
-            src="http://openweathermap.org/img/wn/02d@2x.png"
-            className="mini-future-forecast-image"
-            alt="few clouds"
-          />
-          <br />
-          19°C
-        </div>
-        <div className="col-sm mini-future-forecast">
-          <span className="future-day">Sun</span>
-          <br />
-          <img
-            src="http://openweathermap.org/img/wn/01d@2x.png"
-            className="mini-future-forecast-image"
-            alt="clear sky"
-          />
-          <br />
-          21°C
+          <div className="forecast-temperatures">
+            <span className="forecast-max-temp">19°</span>
+            <span className="forecast-min-temp">17°</span>
+          </div>
         </div>
       </div>
     </div>

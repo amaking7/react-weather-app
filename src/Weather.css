@@ -32,8 +32,7 @@
 .Weather .weather-temperature img {
   margin-right: 16px;
   float: left;
-  height: 64px;
-  width: 64px;
+  max-width: 80px;
 }
 
 .Weather .current-city-temperature {
@@ -49,25 +48,6 @@
 .Weather .weather-units .active {
   color: #333;
   cursor: default;
-}
-
-.future-forecast {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.future-forecast-day {
-  font-size: 16px;
-  font-weight: 600;
-  opacity: 0.6;
-}
-
-.future-forecast-temperatures {
-  font-size: 14px;
-}
-
-.future-forecast-temp-min {
-  opacity: 0.6;
 }
 
 .footnote {

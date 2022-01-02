@@ -1,0 +1,30 @@
+.FutureForecast {
+  text-align: center;
+}
+
+.FutureForecast img {
+  max-width: 72px;
+}
+
+.FutureForecast .future-forecast {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.FutureForecast .forecast-day {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.FutureForecast .forecast-temperatures {
+  font-size: 18px;
+}
+
+.FutureForecast .forecast-max-temp {
+  font-weight: 500;
+}
+
+.FutureForecast .forecast-min-temp {
+  opacity: 0.6;
+  margin-left: 8px;
+}

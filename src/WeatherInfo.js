@@ -8,7 +8,7 @@ export default function WeatherInfo(props) {
     <div className="WeatherInfo">
       {/* Location Overview */}
       <div className="row">
-        <div class="col-sm location-overview">
+        <div className="col-sm location-overview">
           <h1 id="current-city">{props.data.city}</h1>
           Last updated:{" "}
           <span id="date-time">

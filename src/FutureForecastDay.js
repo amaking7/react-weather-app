@@ -13,7 +13,7 @@ export default function FutureForecastDay(props) {
   }
 
   function day() {
-    let date = props.forecast.dt;
+    let date = new Date(props.forecast.dt);
     let day = date.getDay();
 
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];

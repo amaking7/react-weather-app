@@ -24,6 +24,7 @@ export default function FutureForecast(props) {
                 </div>
               );
             }
+            return null;
           })}
         </div>
       </div>
